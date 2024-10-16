@@ -1,82 +1,92 @@
-/* Basic styling */
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
-    overflow-x: hidden;
-    min-height: 100vh; /* Ensure the body takes full height */
-    display: flex;
-    flex-direction: column; /* Use flexbox for layout */
 }
 
-header {
-    background-color: #1877f2;
-    color: white;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     padding: 20px;
 }
 
-header h1 {
-    margin: 0;
+header {
+    background-color: #3b5998; /* Facebook blue */
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    position: relative;
 }
 
-header button {
-    margin: 10px;
-    padding: 10px 15px;
-    border: none;
-    background-color: white;
-    color: #1877f2;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-header button:hover {
-    background-color: #145dbf;
-    color: white;
-}
-
-section {
-    margin: 20px 0;
-    flex-grow: 1; /* Allow sections to grow and take available space */
-}
-
-.app-links a {
-    display: block;
-    margin: 10px auto;
+.marquee {
+    background-color: #ffffff;
+    color: #333;
     padding: 10px;
-    background-color: #1877f2;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    width: 200px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
 }
 
-.app-links a:hover {
-    background-color: #145dbf;
-    transform: translateY(-5px);
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+main {
+    margin-top: 50px; /* Space for the marquee */
+}
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #3b5998; /* Facebook blue */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.video-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 1px solid #ccc;
 }
 
 footer {
-    background-color: #1877f2;
-    color: white;
+    background-color: #3b5998; /* Facebook blue */
+    color: #ffffff;
+    text-align: center;
     padding: 10px;
-    width: 100%;
-    position: relative; /* Change to relative for normal flow */
-    bottom: 0; /* Keep it at the bottom */
-}
-
-/* Adjust iframe size for video tutorials */
-#video-tutorials iframe {
-    width: 80%;
-    height: 400px;
-    margin: 20px 0; /* Add margin to give space between video and footer */
-}
-
-/* Chatbot customization */
-#tawk-chat {
-    width: 400px !important;
-    height: 600px !important;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
