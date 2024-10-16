@@ -1,82 +1,62 @@
-/* Basic styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
-    overflow-x: hidden;
-    min-height: 100vh; /* Ensure the body takes full height */
-    display: flex;
-    flex-direction: column; /* Use flexbox for layout */
 }
 
 header {
-    background-color: #1877f2;
+    background-color: #3b5998; /* Facebook blue */
     color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.marquee {
+    background-color: #fff;
+    color: #3b5998; /* Facebook blue */
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%; /* Start the text off-screen */
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+main {
     padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the main content */
 }
 
-header h1 {
-    margin: 0;
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
 }
 
-header button {
-    margin: 10px;
-    padding: 10px 15px;
-    border: none;
-    background-color: white;
-    color: #1877f2;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-header button:hover {
-    background-color: #145dbf;
-    color: white;
-}
-
-section {
-    margin: 20px 0;
-    flex-grow: 1; /* Allow sections to grow and take available space */
-}
-
-.app-links a {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    background-color: #1877f2;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    width: 200px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.app-links a:hover {
-    background-color: #145dbf;
-    transform: translateY(-5px);
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 footer {
-    background-color: #1877f2;
+    background-color: #3b5998; /* Facebook blue */
     color: white;
-    padding: 10px;
-    width: 100%;
-    position: relative; /* Change to relative for normal flow */
-    bottom: 0; /* Keep it at the bottom */
-}
-
-/* Adjust iframe size for video tutorials */
-#video-tutorials iframe {
-    width: 80%;
-    height: 400px;
-    margin: 20px 0; /* Add margin to give space between video and footer */
-}
-
-/* Chatbot customization */
-#tawk-chat {
-    width: 400px !important;
-    height: 600px !important;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
 }
