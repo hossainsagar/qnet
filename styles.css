@@ -37,7 +37,6 @@ header button:hover {
     color: white;
 }
 
-/* Moving banner styles */
 .banner {
     background-color: #3b5998; /* Facebook blue */
     color: #ffffff;
@@ -47,16 +46,15 @@ header button:hover {
     white-space: nowrap;
     box-sizing: border-box;
     position: relative; /* Ensures the banner can move within its container */
+    z-index: 1; /* Ensures banner is on top of other elements */
 }
 
 .banner p {
     display: inline-block;
     padding-right: 100%; /* Starts the text from outside the left edge */
-    animation: scroll-right 10s linear infinite; /* Animation for scrolling */
-    margin: 0; /* Remove default margin */
+    animation: scroll-right 10s linear infinite; /* Animation changes to scroll-right */
 }
 
-/* Animation to scroll from left to right */
 @keyframes scroll-right {
     from {
         transform: translateX(-100%); /* Start from the left */
