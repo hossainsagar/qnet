@@ -13,12 +13,14 @@
         <button onclick="switchLanguage('en')">English</button>
         <button onclick="switchLanguage('zh')">中文</button>
     </header>
-<div class="banner">
-    <p>Working Hour: 6 PM to 10 PM</p>
-</div>
+    
+    <!-- Banner Section -->
+    <div class="banner">
+        <p>Working Hour: 6 PM to 10 PM</p>
+    </div>
 
-
-    <section id="description" data-lang="en">
+    <!-- Pricing Section -->
+    <section id="description-en" data-lang="en">
         <h2>Packages and Prices</h2>
         <p>1 Month: 20 Yuan</p>
         <p>3 Month: 58 Yuan</p>
@@ -36,16 +38,18 @@
         <p>15个月：250元</p>
     </section>
 
-    
-    <section id="description" data-lang="en">
+    <!-- App Download Section -->
+    <section id="downloads-en" data-lang="en">
         <h2>Download and Install Apps</h2>
         <p>Here, you can download the latest versions of our apps for different platforms and watch tutorial videos on how to use them.</p>
     </section>
-    <section id="description-zh" data-lang="zh" style="display: none;">
+    
+    <section id="downloads-zh" data-lang="zh" style="display: none;">
         <h2>下载并安装应用程序</h2>
         <p>在这里，您可以下载我们不同平台的最新版本应用程序，并观看如何使用这些应用程序的教程视频。</p>
     </section>
 
+    <!-- App Links Section -->
     <section class="app-links" data-lang="en">
         <h2>Download Links</h2>
         <a href="https://vpnclient.app/apk/VPNClient.apk">Download Android APK</a>
@@ -55,6 +59,7 @@
         <a href="https://vpnclient.app/apk/VPNClient-TV.apk">Download Android TV APK</a>
         <a href="https://vpnclient.app/current/vpnclient/vpnclient.run">Download Linux App</a>
     </section>
+
     <section class="app-links" data-lang="zh" style="display: none;">
         <h2>下载链接</h2>
         <a href="https://vpnclient.app/apk/VPNClient.apk">下载 Android APK</a>
@@ -65,48 +70,38 @@
         <a href="https://vpnclient.app/current/vpnclient/vpnclient.run">下载 Linux 应用程序</a>
     </section>
 
-    <section id="video-tutorials">
-        <h2>Video Tutorials</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allowfullscreen></iframe>
-    </section>
-
-    <section id="video-tutorials">
+    <!-- Video Tutorials -->
+    <section class="video-tutorials">
         <h2>Video Tutorials</h2>
         <video width="560" height="315" controls>
-          <source src="iPhone.mp4" type="video/mp4">
+          <source src="android.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
     </section>
 
-
-  
-
-    <section id="video-tutorials">
+    <section class="video-tutorials">
         <h2>Video Tutorials - Windows Computer</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allowfullscreen></iframe>
+        <video width="560" height="315" controls>
+          <source src="windows.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
     </section>
 
-    <section id="video-tutorials">
-        <h2>Video Tutorials - iphone & iPad</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allowfullscreen></iframe>
+    <section class="video-tutorials">
+        <h2>Video Tutorials - iPhone & iPad</h2>
+        <video width="560" height="315" controls>
+          <source src="iphone-ipad.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
     </section>
 
-    <section id="video-tutorials">
-        <h2>Video Tutorials - Mac OS</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allowfullscreen></iframe>
-    </section>
-
-    <section id="video-tutorials">
-        <h2>Video Tutorials - Linux 16 & 18</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" allowfullscreen></iframe>
-    </section>
-
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Quick Net. All rights reserved.</p>
         <p>E-mail: contact@quick-net.online</p>
     </footer>
 
-    <!--Start of Tawk.to Script-->
+    <!-- Tawk.to Chat Integration -->
     <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
@@ -118,6 +113,5 @@
         s0.parentNode.insertBefore(s1, s0);
     })();
     </script>
-    <!--End of Tawk.to Script-->
 </body>
 </html>
